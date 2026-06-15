@@ -16,5 +16,11 @@
 - [x] Traitement analytique de l'erreur d'iframe Firebase Auth (auth/internal-error)
 - [x] Résolution des erreurs de déploiement (Correction d'alias ESM de Vite, simplification des structures de métadonnées et format d'environnement)
 - [x] Automatisation de la résilience API : Implémentation d'un mécanisme de retry exponentiel (backoff) et bascule d'urgence (failover) du modèle gemini-3.5-flash vers gemini-3.1-flash-lite en cas de forte charge de Google (503 UNAVAILABLE)
+- [x] Conception du Tableau de bord (Dashboard) : Affichage des statistiques de conversion et des consommations de quotas
+- [x] Aménagement du répertoire de gestion "Mes Formulaires"
+- [x] Implémentation du moteur de recherche plein texte sur les métadonnées et titres de projets
+- [x] Prise en charge de la suppression sécurisée et définitive des projets
+- [x] Intégration de la routine de duplication profonde de projets (clonage de définitions de formulaires)
+- [x] Développement de l'espace "Paramètres" avec personnalisation interactive des plafonds de quotas
 
 

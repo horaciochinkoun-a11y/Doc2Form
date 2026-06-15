@@ -41,5 +41,16 @@
 - Alternatives envisagées : Abandonner l'analyse ou afficher le paquet JSON technique d'erreur d'origine directement à l'écran (rejeté car indigeste et pauvre en expérience utilisateur).
 - Conséquences : Tolérance totale aux pannes serveurs tierces et expérience utilisateur parfaitement rationalisée.
 
+## Extension Multi-Vues et Moteur d'Administration de Projets (Local-First Store & Quotas)
+- Date : 2026-06-15
+- Contexte : Extension majeure demandée pour intégrer un Dashboard complet (KPIs, volumes de conversion), un gestionnaire "Mes Formulaires" (recherche floue, duplication de profils, suppression), et un onglet de configuration "Paramètres" avec gestion fine de quotas.
+- Décision : 
+  1. Conception d'une navigation sémantique latérale responsive (Sidebar Desktop & Menu mobile) structurée autour d'un routeur par sélecteurs d'onglets réactifs.
+  2. Création d'une couche d'encapsulation de persistance locale de projets (`storage.ts`) s'alignant sur LocalStorage pour une vitesse d'exécution instantanée chez les clients et pré-remplie d'exemples académiques types d'onboarding.
+  3. Intégration d'un algorithme de clonage au moment de la demande de duplication pour éviter le pointeur de référence mémoire d'objet et générer des copies éditables autonomes (copie d'ID, réinitialisation de statut d'export).
+  4. Création d'un simulateur de quota modulable depuis la page de configuration pour permettre à l'utilisateur de tester la levée des limites en optant virtuellement pour un forfait Business ou Pro.
+- Alternatives envisagées : Branchement direct de Firestore (mis de côté temporairement afin d'offrir une réactivité instantanée instantanément exploitable sans paramétrage complexe de droits de bases de données par l'utilisateur).
+- Conséquences : L'expérience utilisateur est décuplée, digne des meilleurs SaaS de productivité bureautique, et offre un niveau de contrôle optimal sur la mémoire réseau.
+
 
 
